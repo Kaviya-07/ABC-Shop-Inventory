@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Add New Item</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h2>Add New Item</h2>
+
+    <form action="/items/add" method="POST" class="form">
+      {{#if error}}
+      <p class="error">{{error}}</p>
+      {{/if}}
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" required />
+
+      <label for="quantity">Quantity:</label>
+      <input type="number" name="quantity" id="quantity" min="0" required />
+
+      <label for="reorderPoint">Reorder Point:</label>
+      <input type="number" name="reorderPoint" id="reorderPoint" min="0" value="10" required />
+
+      <label for="price">Price:</label>
+      <input type="number" name="price" id="price" step="0.01" min="0" required />
+
+      <button type="submit" class="btn-add">Add Item</button>
+    </form>
+  </div>
+</body>
+
+</html>

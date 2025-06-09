@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sell Item</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Sell Item - {{item.name}}</h2>
+
+    <p><strong>Available quantity:</strong> {{item.quantity}}</p>
+
+    <form action="/items/sell/{{item._id}}" method="POST" class="form">
+      <label for="quantity">Quantity to Sell:</label>
+      <input type="number" name="quantity" id="quantity" min="1" max="{{item.quantity}}" required />
+
+      <button type="submit" class="btn-sell">Sell</button>
+    </form>
+  </div>
+</body>
+</html>

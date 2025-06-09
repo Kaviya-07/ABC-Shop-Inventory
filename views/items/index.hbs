@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ABC Shop Inventory</title>
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>ABC Shop Inventory</h1>
+      <a href="/items/add" class="btn-add">+ Add Item</a>
+    </header>
+
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Quantity</th>
+          <th>Reorder Point</th>
+          <th>Price</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      {{#if items.length}}
+      <tbody>
+        {{#each items}}
+        <tr class="{{#if this.isLowStock}}low-stock{{/if}}">
+          <td>{{this.name}}</td>
+          <td>
+            {{this.quantity}}
+            {{#if this.isLowStock}}
+            <span class="low-stock">⚠ Low Stock</span>
+            {{/if}}
+          </td>
+
+          <td>{{this.reorderPoint}}</td>
+          <td>{{this.price}}</td>
+          <td class="action-buttons">
+            <a href="/items/edit/{{this._id}}" class="icon edit" title="Edit"><i class="fas fa-edit"></i></a>
+            <a href="/items/sell/{{this._id}}" class="icon sell" title="Sell"><i class="fas fa-cash-register"></i></a>
+            <a href="/items/purchase/{{this._id}}" class="icon purchase" title="Purchase"><i
+                class="fas fa-truck-loading"></i></a>
+            <a href="/items/report/{{this._id}}" class="icon report" title="Report"><i class="fas fa-chart-bar"></i></a>
+            <form action="/items/delete/{{this._id}}?_method=DELETE" method="POST" class="inline-form"
+              onsubmit="return confirm('Are you sure?');" style="display:inline;">
+              <button type="submit" class="icon delete" title="Delete"
+                style="background:none; border:none; cursor:pointer; color:#e74c3c;">
+                <i class="fas fa-trash-alt"></i>
+              </button>
+            </form>
+            {{#if this.isLowStock}}
+            <a href="/items/purchase/{{this._id}}" class="reorder-btn">Reorder Now</a>
+            {{/if}}
+          </td>
+        </tr>
+        {{/each}}
+
+      </tbody>
+    </table>
+    {{else}}
+    <p class="no-items">No items found in inventory.</p>
+    {{/if}}
+  </div>
+</body>
+
+</html>

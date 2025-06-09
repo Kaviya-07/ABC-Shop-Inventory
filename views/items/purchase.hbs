@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Purchase Item</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Purchase (Restock) Item - {{item.name}}</h2>
+
+    <p><strong>Current quantity:</strong> {{item.quantity}}</p>
+
+    <form action="/items/purchase/{{item._id}}" method="POST" class="form">
+      <label for="quantity">Quantity to Purchase:</label>
+      <input type="number" name="quantity" id="quantity" min="1" required />
+
+      <button type="submit" class="btn-purchase">Purchase</button>
+    </form>
+  </div>
+</body>
+</html>

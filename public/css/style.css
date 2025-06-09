@@ -1,0 +1,358 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f6f8fa;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 28px;
+  color: #2c3e50;
+}
+
+.btn-add {
+  background-color: #27ae60;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-add:hover {
+  background-color: #1e8449;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table thead {
+  background-color: #2980b9;
+  color: white;
+}
+
+table th,
+table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.action-buttons a,
+.action-buttons button {
+  margin-right: 8px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.edit {
+  background-color: #3498db;
+}
+.sell {
+  background-color: #f39c12;
+}
+.purchase {
+  background-color: #2ecc71;
+}
+.report {
+  background-color: #8e44ad;
+}
+.delete {
+  background-color: #e74c3c;
+}
+.inline-form {
+  display: inline;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.form button {
+  margin-top: 20px;
+  padding: 10px 18px;
+  border: none;
+  background-color: #27ae60;
+  color: white;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.form button:hover {
+  background-color: #1e8449;
+}
+.btn-back {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 16px;
+  background-color: #34495e;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn-back:hover {
+  background-color: #2c3e50;
+}
+.no-items {
+  text-align: center;
+  font-size: 1.2rem;body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f6f8fa;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 28px;
+  color: #2c3e50;
+}
+
+.btn-add {
+  background-color: #27ae60;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-add:hover {
+  background-color: #1e8449;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table thead {
+  background-color: #2980b9;
+  color: white;
+}
+
+table th,
+table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.action-buttons a,
+.action-buttons button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 5px;
+  color: #333;
+  transition: transform 0.2s, color 0.3s;
+}
+
+.action-buttons a.edit { color: #3498db; }
+.action-buttons a.sell { color: #f39c12; }
+.action-buttons a.purchase { color: #2ecc71; }
+.action-buttons a.report { color: #8e44ad; }
+.action-buttons button.delete { color: #e74c3c; }
+
+.action-buttons a:hover,
+.action-buttons button:hover {
+  transform: scale(1.2);
+}
+
+.inline-form {
+  display: inline;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.form button {
+  margin-top: 20px;
+  padding: 10px 18px;
+  border: none;
+  background-color: #27ae60;
+  color: white;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.form button:hover {
+  background-color: #1e8449;
+}
+
+.btn-back {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 16px;
+  background-color: #34495e;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn-back:hover {
+  background-color: #2c3e50;
+}
+
+.no-items {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #999;
+  margin-top: 30px;
+}
+
+.low-stock {
+  color: red;
+  font-weight: bold;
+  margin-left: 10px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+  color: #999;
+  margin-top: 30px;
+}
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.action-buttons a.icon,
+.action-buttons button.icon {
+  font-size: 1.2rem;
+  color: #2980b9;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.action-buttons a.icon:hover,
+.action-buttons button.icon:hover {
+  color: #1c5980;
+}
+
+.action-buttons button.icon {
+  padding: 0;
+}
+
+.action-buttons button.icon:focus {
+  outline: none;
+}
+.low-stock {
+  color: red;
+  font-weight: bold;
+  margin-left: 10px;
+  animation: blink 1s infinite;
+}
+.error {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+
+
